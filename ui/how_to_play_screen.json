@@ -1,0 +1,174 @@
+{
+    "namespace": "how_to_play",
+    "how_to_play_screen@how_to_play_common.screen_base": {
+        "$selector_stack_panel": "how_to_play.selector_stack_panel",
+        "$section_content_panels": "how_to_play.section_content_panels",
+        "$header_safezone_control": "common_store.store_top_bar_filler",
+        "$header_bar_control": "common_store.store_top_bar",
+        "$is_full_screen_layout": true
+    },
+    "selector_stack_panel": {
+        "type": "stack_panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "orientation": "vertical",
+        "$default_selector_toggle_index": 0,
+        "controls": [{
+            "how_to_play_selector_pane": {
+                "type": "stack_panel",
+                "controls": [{
+                        "padding_0": {
+                            "type": "panel",
+                            "size": [
+                                0,
+                                6
+                            ]
+                        }
+                    },
+                    {
+                        "keyyard_category@how_to_play_common.topic_category": {
+                            "$category": "keyyard"
+                        }
+                    },
+                    {
+                        "keyyard_button@how_to_play.keyyard_button": {
+                            "$toggle_group_forced_index": 0
+                        }
+                    },
+                    {
+                        "emoji_button@how_to_play.emoji_button": {
+                            "$toggle_group_forced_index": 1
+                        }
+                    },
+                    {
+                        "bug_button@how_to_play.bug_button": {
+                            "$toggle_group_forced_index": 2
+                        }
+                    },
+                    {
+                        "padding_1@how_to_play_common.padding": {
+                            "size": [
+                                0,
+                                10
+                            ]
+                        }
+                    }
+                ]
+            }
+        }]
+    },
+    "section_content_panels": {
+        "type": "stack_panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": [
+            "100% - 5px",
+            "100%c + 5px"
+        ],
+        "offset": [
+            2,
+            0
+        ],
+        "controls": [{
+            "general_tips_sections": {
+                "type": "stack_panel",
+                "controls": [{
+                        "section_contents_header@how_to_play_common.section_contents_header": {}
+                    },
+                    {
+                        "keyyard_button@how_to_play.keyyard_section": {}
+                    },
+                    {
+                        "emoji_button@how_to_play.emoji_section": {}
+                    },
+                    {
+                        "bug_button@how_to_play.bug_section": {}
+                    },
+                    {
+                        "section_contents_footer@how_to_play_common.section_contents_footer": {}
+                    }
+                ]
+            }
+        }]
+    },
+    "keyyard_button@how_to_play_common.section_toggle_button": {
+        "$section_topic": "keyyard"
+    },
+    "keyyard_section@how_to_play_common.main_sections": {
+        "bindings": [{
+            "binding_type": "view",
+            "source_control_name": "keyyard_button_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        }],
+        "controls": [{
+                "header_1@how_to_play_common.header": {
+                    "$text": "Creator"
+                }
+            },
+            {
+                "paragraph_1@how_to_play_common.paragraph": {
+                    "$text": "Created by §eKeyyard Studio§r, you can look for our products in the Official Minecraft Marketplace.\nContact us: contact@keyyard.studio\nCredits:\n§lJoshua§r\n§bTwitter: @RealJoshMC§r\n§lAsh§r\n§bTwitter: @justAsh01§r\n§lKeyyard§r\n§bTwitter: @keyyard§r\n§iThank you for downloading!"
+                }
+            }
+        ]
+    },
+    "emoji_button@how_to_play_common.section_toggle_button": {
+        "$section_topic": "emoji"
+    },
+    "emoji_section@how_to_play_common.main_sections": {
+        "bindings": [{
+            "binding_type": "view",
+            "source_control_name": "emoji_button_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        }],
+        "controls": [{
+                "header_2@how_to_play_common.header": {
+                    "$text": "Emoji Dictionary"
+                }
+            },
+            {
+                "image_0@how_to_play_common.image": {
+                    "texture": "textures/ui/list",
+                    "size": [
+                        "100%",
+                        "196px"
+                    ]
+
+                }
+            }
+        ]
+    },
+    "bug_button@how_to_play_common.section_toggle_button": {
+        "$section_topic": "bug"
+    },
+    "bug_section@how_to_play_common.main_sections": {
+        "bindings": [{
+            "binding_type": "view",
+            "source_control_name": "bug_button_toggle",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        }],
+        "controls": [{
+                "header_3@how_to_play_common.header": {
+                    "$text": "Bug & Fix"
+                }
+            },
+            {
+                "paragraph_2@how_to_play_common.paragraph": {
+                    "$text": "In case the addon haven't work for you, have you tried turning on Gametest Engine?"
+                }
+            },
+            {
+                "image_1@how_to_play_common.image": {
+                    "texture": "textures/ui/err",
+                    "size": [
+                        "100%",
+                        "25px"
+                    ]
+                }
+            }
+        ]
+    }
+}

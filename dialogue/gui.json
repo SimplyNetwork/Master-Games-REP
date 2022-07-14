@@ -1,0 +1,141 @@
+{
+	"format_version": "1.17.100",
+	"minecraft:npc_dialogue":
+	{
+		"scenes":
+		[
+			{
+				"scene_tag": "page0",
+				"npc_name": { "rawtext": [ {"text":"§l§6Settings"} ] },
+				"text": { "rawtext": [ {"text":" "} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"§fEffects"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page1",
+							"/execute as @initiator positioned ~~~ run /playsound note.pling @s ~~~ 1 2 1"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§fSettings"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page1",
+							"/execute as @initiator positioned ~~~ run /playsound note.pling @s ~~~ 1 2 1"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§fHelp"} ] },
+						"commands": [
+							"/dialogue open @s @initiator help",
+							"/execute as @initiator positioned ~~~ run /playsound note.pling @s ~~~ 1 2 1"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§r"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page0",
+							"/execute as @initiator positioned ~~~ run /playsound note.pling @s ~~~ 1 1 1"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§r"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page0",
+							"/execute as @initiator positioned ~~~ run /playsound note.pling @s ~~~ 1 1 1"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§cClose"} ] },
+						"commands": [
+							"none"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "help",
+				"npc_name": { "rawtext": [ {"text":" "} ] },
+				"text": { "rawtext": [ {"text":" "} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"§cBack"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page0"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "page1",
+				"npc_name": { "rawtext": [ {"text":"§fImproved Npc Gui Template §3v2"} ] },
+				"text": { "rawtext": [ {"text":"This is Template Text Position top right, sample text.\n\n§7Created By:\n§3xtranda  §8|  §3NJ7010 "} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"§fSpawn"} ] },
+						"commands": [
+							"/tp @initiator 0 5 0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§fShop"} ] },
+						"commands": [
+							"/tp @initiator 0 10 0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§cBack"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page0"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "page1",
+				"npc_name": { "rawtext": [ {"text":"§fImproved Npc Gui Template §3v2"} ] },
+				"text": { "rawtext": [ {"text":"This is Template Text Position top right, sample text.\n\n§7Created By:\n§3xtranda  §8|  §3NJ7010 "} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"§fVision"} ] },
+						"commands": [
+							"/dialogue open @s @initiator setting0"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§cBack"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page0"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "setting0",
+				"npc_name": { "rawtext": [ {"text":"§fImproved Npc Gui Template §3v2"} ] },
+				"text": { "rawtext": [ {"text":"This is Template Text Position top right, sample text.\n\n§7Created By:\n§3xtranda  §8|  §3NJ7010 "} ] },
+				"buttons": [
+					{
+						"name": { "rawtext": [ {"text":"§2ON"} ] },
+						"commands": [
+							"/execute @initiator ~~~ function vision/on",
+							"/execute @initiator ~~~ tellraw @s {\"rawtext\":[{\"text\":\"§aNight Vison §2ON\"}]}"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§4OFF"} ] },
+						"commands": [
+							"/execute as @initiator positioned ~~~ run /function vision/off",
+							"/execute as @initiator positioned ~~~ run /tellraw @s {\"rawtext\":[{\"text\":\"§cNight Vison §4OFF\"}]}"
+						]
+					},
+					{
+						"name": { "rawtext": [ {"text":"§cBack"} ] },
+						"commands": [
+							"/dialogue open @s @initiator page2"
+						]
+					}
+				]
+			}
+		]
+	}
+}

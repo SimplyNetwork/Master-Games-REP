@@ -1,0 +1,19 @@
+{
+	"function": {
+		"BP/functions/on_kill_death.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"killer"
+			]
+		},
+		"BP/functions/kill.mcfunction": {
+			"custom_commands": [],
+			"tags": [
+				"killer"
+			]
+		},
+		"BP/functions/death.mcfunction": {
+			"custom_commands": []
+		}
+	}
+}
